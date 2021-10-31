@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
+import { Search } from './Components/Search/Search';
+import { LanguageSettings } from './Components/LanguageSettings/LanguageSettings';
+import { WeatherBlock } from './Components/WeatherBlock/WeatherBlock';
+
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <section>
+        <LanguageSettings />
+      </section>
+
+      <section>
+        <Search />
+      </section>
+
+      <section className='main'>
+        <WeatherBlock />
+      </section>
     </div>
+
   );
 }
 
