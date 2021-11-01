@@ -1,0 +1,34 @@
+.weather-prop-block {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding:14px 0 0 0;
+    margin-right: 5px;
+}
+
+.prop-el {
+    margin: 5px 0 0 0;
+    display: flex;
+    justify-content:flex-end;
+} 
+
+.prop {
+    display: flex;
+    margin: 0 3px 0 0;
+    text-align: right;
+    font: normal normal normal 12px/18px Jost;
+}
+
+.value {
+    display: flex;
+    text-align: right;
+    font: normal normal 600 12px/18px Jost;
+}
+
+.weather-prop-block .cold { 
+    color: #459DE9;
+}
+
+.weather-prop-block .warm { 
+    color: #FFA25B;
+}

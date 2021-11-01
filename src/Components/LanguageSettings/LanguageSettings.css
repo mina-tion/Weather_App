@@ -1,0 +1,76 @@
+.language {
+  display: flex;
+  width: 100%;
+  font: normal normal normal 16px/23px Jost;
+  color: #AFAFAF;
+  justify-content: flex-end;
+  text-transform: uppercase;
+}
+
+.lang-block {
+  position: relative;
+  width: 71px;
+}
+
+.lang-caption {
+  display: flex;
+  align-items: center;
+}
+
+.lang-caption:hover {
+  background-color: #F2F2F2;
+  cursor: pointer;
+}
+
+.lang-icon {
+  background-image: url('../../images/material-language.svg');
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.current-lang {
+  padding: 0px;
+  text-align: center;
+}
+
+.arrow-icon {
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+}
+
+.up {
+  background-image: url('../../images/chevron-up.svg');
+}
+
+.down {
+  background-image: url('../../images/chevron-down.svg');
+}
+
+.lang-list{
+  padding: 0;
+  display: block;
+  text-align: center;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  margin: 0px auto;
+}
+
+.lang-list li{
+  padding: 3px 47px 0px 5px;
+  list-style: none;
+  background-color: white;
+  font: normal normal normal 14px/20px Jost;
+  color: #000000;
+}
+
+.lang-list li:hover{
+  background-color: #F2F2F2;
+  cursor: pointer;
+}
+  

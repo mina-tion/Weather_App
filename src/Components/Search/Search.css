@@ -1,0 +1,80 @@
+.search {
+    margin-top: 120px;
+}
+
+.search-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-field {
+    font: normal normal normal 14px/20px Jost;
+    text-align: left;
+    padding: 0px 10px 0px 10px;
+    width: 569px;
+    height: 40px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+    border: 1px;
+    margin-right: 10px;
+}
+
+.search-field:focus {
+    outline:none;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.473);
+}
+
+.error { 
+    box-shadow: 0px 2px 6px rgba(241, 6, 6, 0.473);
+}
+
+.requests {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.hint {
+    background-color:violet;
+    width: 100%;
+    height: 23px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    
+}
+
+.hint:hover {
+    background: #F2F2F2 0% 0% no-repeat padding-box;
+}
+
+.add-button {
+    width: 112px;
+    height: 40px;
+    background: #459DE9 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 5px;
+
+    color:white;
+    text-align: left;
+    font: normal normal normal 14px/20px Jost;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    background-color: #5faaec;
+    
+}
+
+.add-button:active {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    background-color: #2173bb;
+}

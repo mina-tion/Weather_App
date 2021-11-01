@@ -1,0 +1,66 @@
+.temperature-block {
+    display: flex;
+    margin: 10px 10px 0 0;
+    position: relative;
+    height: 78px;
+}
+
+.temperature {
+    text-align: left;
+    font: normal normal normal 44px/64px Jost;
+    margin:0 5px 0 0;
+    display: flex;
+}
+
+.temperature-settings {
+    display: flex;
+}
+
+.unit {
+    display: flex;
+    text-align: left;
+    font: normal normal normal 22px/32px Jost;
+}
+
+.active {
+    color: #000000
+}
+
+.unactive {
+    color: #8D8D8D;
+    cursor: pointer;
+}
+
+.line {
+    display:flex;
+    height: 23px;
+    border: 1px solid #707070;
+    margin: 0 10px 0 10px;
+}
+
+
+.fl-block {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    letter-spacing: 0px;
+    height: 19px;
+    width: 100px;
+    color: #C5C5C5;
+    font: normal normal normal 13px/19px Jost;
+    display: flex;
+}
+
+.fl {
+    display: flex;
+    margin:0 3px 0 0;
+}
+
+.fl-value {
+    display: flex;
+    text-align: left;
+    font: normal normal 600 13px/19px Jost;
+    letter-spacing: 0px;
+    color: #C5C5C5;
+}
