@@ -3,7 +3,7 @@ import './App.css';
 import { Search } from './Components/Search/Search';
 import { LanguageSettings } from './Components/LanguageSettings/LanguageSettings';
 import { WeatherCard } from './Components/WeatherCard/WeatherCard';
-import { UsePosition } from './hooks/UsePosition.js'
+import { UsePosition } from './Components/Position/UsePosition.js'
 
 function App() {
 
