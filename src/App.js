@@ -2,13 +2,15 @@ import './App.css';
 
 import { Search } from './Components/Search/Search';
 import { LanguageSettings } from './Components/LanguageSettings/LanguageSettings';
-import { WeatherBlock } from './Components/WeatherBlock/WeatherBlock';
-
+import { WeatherCard } from './Components/WeatherCard/WeatherCard';
+import { UsePosition } from './hooks/UsePosition.js'
 
 function App() {
 
   return (
     <div className='App'>
+      <UsePosition />
+
       <section>
         <LanguageSettings />
       </section>
@@ -18,7 +20,7 @@ function App() {
       </section>
 
       <section className='main'>
-        <WeatherBlock />
+        <WeatherCard />
       </section>
     </div>
 

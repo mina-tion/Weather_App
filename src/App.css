@@ -12,8 +12,7 @@
 
 .main {
   display: flex;
-/*   flex-direction: row;
-  align-content: center; */
+  justify-content: center; 
   margin-top: 110px;
   align-content: center;
   flex-wrap: wrap;
