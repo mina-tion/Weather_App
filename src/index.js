@@ -5,11 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {store} from './store/index'
 import {Provider} from "react-redux"
+import { Suspense } from 'react';
+import './i18n'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Suspense fallback='loading...'>
+         <App />
+      </Suspense>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
