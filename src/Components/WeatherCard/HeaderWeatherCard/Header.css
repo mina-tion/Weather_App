@@ -11,6 +11,12 @@
     display: flex;
     position: absolute;
     top:0px;
+}
+
+.reflection { 
+    left: 15px;
+}
+.normal { 
     right:15px;
 }
 

@@ -4,7 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpBackend from 'i18next-http-backend';
 import translationEN from './locales/en/translationEN.json'
 import translationUA from './locales/ua/translationUA.json'
-
+import translationHE from './locales/he/translationHE.json'
 
 i18n
 .use(initReactI18next) // passes i18n down to react-i18next
@@ -13,12 +13,17 @@ i18n
 .init({
 
     resources: { 
-       en: { 
-           translation: translationEN
-       },
-       ua: { 
-        translation: translationUA
-        }
+        en: { 
+            translation: translationEN
+        },
+        ua: { 
+            translation: translationUA
+            },
+
+        he: { 
+            translation: translationHE
+            }
+        
     }, 
 
     detection: { 

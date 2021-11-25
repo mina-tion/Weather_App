@@ -1,7 +1,7 @@
 import './LanguageSettings.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { changeLanguageAction } from '../../store/reducers/language-reducer'
-import { useState } from 'react'
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 
@@ -13,38 +13,30 @@ const { Option } = Select;
 
 export const LanguageSettings = (props) => {
     
-    const { t, i18n } = useTranslation()
-
+    const { i18n } = useTranslation()
     const dispatch = useDispatch()
 
-    const [showList, setShowList] = useState(false)
 
     const currentLanguage =  useSelector(state => state.languages.currentLanguage)
     const langArray = useSelector(state => state.languages.languages)
+    currentLanguage === 'he'? document.body.classList.add('reflection') : document.body.classList.remove('reflection')
 
+    useEffect(() => {
+        i18n.changeLanguage(currentLanguage)
+    }, [])
 
-    const handlerClick = () => {
-        setShowList(!showList)
-    }
-
-    function handleChange(value) {
-        console.log(`selected ${value}`);
-    }
-
-    const changeLanguageClick = (lang) => {
-        dispatch(changeLanguageAction(lang))
-        i18n.changeLanguage(lang)
-        setShowList(!showList)
+    const handleChange = (e) => {
+        dispatch(changeLanguageAction(e.target.value))
+        i18n.changeLanguage(e.target.value)
+        
     }
 
     return (
         <div className='language'>
             <div className='lang-block'>
-            <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
-                <Option value="en">EN</Option>
-                <Option value="ua">UA</Option>
-                <Option value="he">HE</Option>
-            </Select>
+                <select name='lang' id='lang' value={currentLanguage} className='lang-block' onChange={handleChange}>
+                    {langArray.map((lang) => <option value={lang} className='list-item'>{lang}</option>)}
+                </select>
 
 
                {/*  <div className='lang-caption' onClick={handlerClick}>
@@ -55,10 +47,10 @@ export const LanguageSettings = (props) => {
                     : <div className='arrow-icon down'></div>}
                 </div> */}
 
-                <ul className='lang-list'>
+               {/*  <ul className='lang-list'>
                     { showList ? langArray.map((lang, index) => <li key={index} onClick={()=>changeLanguageClick(lang)}>{lang}</li>) 
                     : <></> }
-                </ul>
+                </ul> */}
             </div>
         </div>
     )

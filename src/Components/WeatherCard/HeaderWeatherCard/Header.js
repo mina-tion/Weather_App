@@ -1,8 +1,10 @@
-
+import { useSelector } from 'react-redux'
 import './Header.css'
 
 export const Header = ({datetime, locate, weather}) => {
-    
+
+    const currentLanguage =  useSelector(state => state.languages.currentLanguage)
+
     return (
         <div className='header'>
             <div>
@@ -13,8 +15,7 @@ export const Header = ({datetime, locate, weather}) => {
                                             ${datetime.month},  ${datetime.hours}:${datetime.minutes} `}
                 </div>
             </div>
-
-            <div className='condition-block'>
+            <div className={`condition-block ${currentLanguage==='he'? 'reflection':'normal'}`}>
                 <img src={`http://openweathermap.org/img/w/${weather.icon}.png`} alt=''/>
                 <div className='condition'>{weather.condition}</div>
             </div>

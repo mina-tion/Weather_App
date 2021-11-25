@@ -1,9 +1,11 @@
 
 import { useState, useEffect } from 'react'
 import './Temperature.css'
+import { useTranslation } from 'react-i18next'
 
 export const TemperatueBlock = ({temp, feelsLike}) => {
 
+    const { t } = useTranslation()
     const [unit, setUnit] = useState('C')
 
     const convertToCels = () => {
@@ -27,11 +29,9 @@ export const TemperatueBlock = ({temp, feelsLike}) => {
     }
 
 
-    return ( 
+    return (
         <div className='temperature-block'>
-
             <div className='temperature'>{temperature}</div>
-
             <div className='temperature-settings'>
                 {   unit==='C' 
                     ? <div className='unit active' onClick={convertToCels}>°C</div>
@@ -47,7 +47,7 @@ export const TemperatueBlock = ({temp, feelsLike}) => {
             </div>
 
             <div className='fl-block'>
-                <div className='fl'>Feels like: </div>
+                <div className='fl'>{t("feels_like")}: </div>
                 <div className='fl-value'>{`${flTemperature} °${unit}`} </div>
             </div>
         </div>

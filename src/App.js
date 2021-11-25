@@ -11,19 +11,12 @@ import { Trans } from 'react-i18next';
 function App() {
   const { t, i18n } = useTranslation();
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language)
-  }
 
 
   return (
    
-       <div className='App'>
-
-         <h2> {t("welcome_to_react")} </h2>
-       
+       <div className='App'>       
           <UsePosition />
-
           <section>
             <LanguageSettings />
           </section>
