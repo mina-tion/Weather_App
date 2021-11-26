@@ -35,6 +35,7 @@ export const LanguageSettings = (props) => {
         <div className='language'>
             <div className='lang-block'>
                 <select name='lang' id='lang' value={currentLanguage} className='lang-block' onChange={handleChange}>
+                    
                     {langArray.map((lang) => <option value={lang} className='list-item'>{lang}</option>)}
                 </select>
 
