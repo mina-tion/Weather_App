@@ -30,7 +30,7 @@ export const Search = (props) => {
 				<input
 					className={`search-field ${classError}`}
 					value={inputValue}
-					onChange={(e) => handlerOnChange(e)}
+					onChange={handlerOnChange}
 				></input>
 				<div className='add-button' onClick={handlerOnClick}>
 					{t('button_text')}
